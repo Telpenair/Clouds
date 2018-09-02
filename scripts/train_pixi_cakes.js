@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-    var app = new PIXI.Application(800, 600, {backgroundColor : 0x1099bb});
+    var app = new PIXI.Application(800, 600, {backgroundColor : 0x061e44});
     document.body.appendChild(app.view);
 
     var container = new PIXI.Container();
@@ -7,17 +7,42 @@ document.addEventListener("DOMContentLoaded", function(event) {
     app.stage.addChild(container);
 
     // Create a new texture
-    var texture = PIXI.Texture.fromImage("https://sun1-2.userapi.com/c830409/v830409662/192a8c/x-V8LLD1H_I.jpg");
+    var texture = PIXI.Texture.fromImage("https://image.ibb.co/ifUVCz/cake1.png");
+
+    
 
     // Create a 5x5 grid of bunnies
     for (var i = 0; i < 25; i++) {
+        var lightbulb = new PIXI.Graphics();
+        //var rr = Math.random() * 0x80 | 0;
+        //* (max - min) + min;
+        var rr = Math.random() * (255 - 155) + 155;
+        var rg = Math.random() * (255 - 155) + 155;
+        var rb = Math.random() * (255 - 155) + 155;
+        var rad = 40 + Math.random() * 20;
+        lightbulb.beginFill((rr << 16) + (rg << 8) + rb, 0.65);
+        lightbulb.drawCircle(0, 0, rad);
+        lightbulb.endFill();
+        
+        //lightbulb.anchor.set(0.5);
+        lightbulb.x = (i % 5) * 80;
+        lightbulb.y = Math.floor(i / 5) * 80;
+        //lightbulb.scale.x *= 0.3;
+        //lightbulb.scale.y *= 0.3;
+        // lightbulb.parentLayer = lighting;//<-- try comment it
+
+        container.addChild(lightbulb);
+
         var bunny = new PIXI.Sprite(texture);
         bunny.anchor.set(0.5);
         bunny.x = (i % 5) * 80;
         bunny.y = Math.floor(i / 5) * 80;
         bunny.scale.x *= 0.3;
         bunny.scale.y *= 0.3;
+
         container.addChild(bunny);
+
+        
     }
 
     // Move container to the center
