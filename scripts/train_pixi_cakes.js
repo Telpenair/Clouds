@@ -1,5 +1,10 @@
+    
 document.addEventListener("DOMContentLoaded", function(event) {
+
     var app = new PIXI.Application(800, 600, {backgroundColor : 0x061e44});
+
+    app.view.style.margin = "0 auto";
+    app.view.style.display = "block";
     document.body.appendChild(app.view);
 
     var container = new PIXI.Container();

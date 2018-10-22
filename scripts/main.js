@@ -9,8 +9,13 @@ myImage.onclick = function() {
 	}
 }
 
-var myButton = document.querySelector('button');
+var myButton = document.querySelector('#naming');
+var myButtonResume = document.querySelector('#resume');
 var myHeading = document.querySelector('h1');
+
+myButtonResume.onclick = function() {
+	window.open('resume.html', '_blank');
+}
 
 function setUserName() {
 	var myName = prompt ('Please enter your name.');

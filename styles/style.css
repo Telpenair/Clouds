@@ -13,7 +13,7 @@ h1 {
 	text-shadow: 3px -3px 0 white;
 }
 
-p {
+p, a {
 	font-size: 25px;
 	line-height: 1;
 	letter-spacing: 3px;
@@ -37,4 +37,30 @@ td {
 img {
   display: block;
   margin: 0 auto;
+}
+
+button {
+	display: block;
+	margin: 0 auto;
+	font-size: 30px;
+	font-family: 'Indie Flower', cursive;
+	font-family: 'Amatic SC', cursive;
+	background-color: #c4d4ed;
+	text-align: center;
+    text-decoration: none;
+	border: none;
+    color: white;
+    padding: 15px 32px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+button:hover {
+	background-color: white;
+	border: 4px solid #c4d4ed;
+	color: black;
+	padding: 11px 32px;
+}
+
+a {
+	text-decoration: none;
 }
