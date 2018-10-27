@@ -27,16 +27,140 @@ body {
   padding: 0 20px 20px 20px;
 	border: 5px solid black;
 	text-align: center;
-  
+  animation-name: body-appearence;
+  animation-fill-mode: forwards;
+  animation-duration: 3s;
 }
+@keyframes body-appearence {
+	0% {
+		transform: translateX(300px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
 td {
 	width: 200px;
 	text-align: right;
 	padding: 0 50px 0 50px;
 }
-img {
+
+#upper-img {
   display: block;
   margin: 0 auto;
+  animation-name: img-appearence;
+  animation-fill-mode: forwards;
+  animation-duration: 3s;
+}
+
+@keyframes img-appearence {
+	0% {
+		transform: translateX(-600px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+
+#cloud_main {
+	position: relative;
+	height: 400px;
+	width: 640px;
+}
+
+.cloud {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	width: 640px;
+	height: 400px;
+	z-index: -10;
+}
+
+#cloud28 {
+	transform: translateX(-1100px, 0);
+	animation-name: cloud28;
+	animation-iteration-count: infinite;
+	animation-duration: 60s;
+	animation-delay: -18s;
+}
+
+@keyframes cloud28 {
+	0% {
+		transform: translate(-1100px, 0);
+	}
+	30% {
+		transform: translate(1100px, 0);
+	}
+	100% {
+		transform: translate(-1100px, 0);
+	}
+}
+
+#cloud32 {
+	transform: translate(1100px, -200px);
+	animation-name: cloud32;
+	animation-iteration-count: infinite;
+	animation-duration: 60s;
+	animation-delay: -6s;
+}
+
+@keyframes cloud32 {
+	0% {
+		transform: translate(1100px, -200px);
+	}
+	30% {
+		transform: translate(-1100px, -200px);
+	}
+	100% {
+		transform: translate(1100px, -200px);
+	}
+}
+
+#cloud31{
+	transform: translate(1100px, 200px);
+	animation-name: cloud31;
+	animation-iteration-count: infinite;
+	animation-duration: 60s;
+	animation-delay: -12s;
+}
+
+@keyframes cloud31 {
+	0% {
+		transform: translate(1100px, 200px);
+	}
+	30% {
+		transform: translate(-1100px, 200px);
+	}
+	100% {
+		transform: translate(1100px, 200px);
+	}
+}
+
+#cloud29 {
+	transform: translate(-1100px, 500px);
+	animation-name: cloud29;
+	animation-iteration-count: infinite;
+	animation-duration: 60s;
+	animation-delay: -24s;
+}
+
+@keyframes cloud29 {
+	0% {
+		transform: translate(-1100px, 500px);
+	}
+	30% {
+		transform: translate(1100px, 500px);
+	}
+	100% {
+		transform: translate(-1100px, 500px);
+	}
 }
 
 button {
